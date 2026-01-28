@@ -9,7 +9,7 @@ The project has been successfully initialized with:
 ## Core Architecture (Phase 2)
 The "Core Architect" has implemented:
 - **HypeContext**: Global state management.
-- **WeatherService**: Mock data provider.
+- **WeatherService**: **Real Data Integration** via [Open-Meteo API](https://open-meteo.com/). No API key required.
 - **Integration**: Accessing weather data via `useHype()` hook in the dashboard.
 
 ## Visuals & Vibes (Phase 2)
@@ -21,7 +21,8 @@ The "Vibe Specialist" has added:
 ## Polish & QA / AI (Phase 3)
 The "Polish & QA" and "AI Engineer" roles have added:
 - **Layout Components**: Modular `Header` and `Footer` components.
-- **AI Integration**: `aiService` now generates dynamic "Hype Summaries" based on the score.
+- **AI Integration**: `aiService` generates dynamic "Hype Summaries" based on the real time score.
+- **Hype Logic**: `hypeEngine.js` now processes real temperature and weather codes to calculate the score.
 
 ## Running the Project
 1. **Install Dependencies**:
@@ -40,8 +41,8 @@ The "Polish & QA" and "AI Engineer" roles have added:
 ## Current Features
 - **Hype Dashboard**: A visual meter showing the "Hype Score".
 - **Visual Effects**: Glitch text, animated gauges, backdrop blur.
-- **Dynamic Content**: Weather data and AI summaries are simulated but structurally complete to be replaced by real APIs.
+- **Real Data**: Weather data comes from Open-Meteo (defaulted to Boston, MA).
 
 ## Next Steps
 - **Git Push**: The project is ready to be committed to version control.
-- **API Keys**: Replace mock services with real WeatherAPI and OpenAI calls.
+- **Custom Location**: Add a search bar to change the hardcoded Boston coordinates.
